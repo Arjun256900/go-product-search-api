@@ -5,12 +5,23 @@
 
 A Go-based backend API that performs full-text operation on 1M products with Bleve and Chi-router.
 
+# Prerequisites
+You need `go 1.21+` to run this project.
+
 # Getting started
 ## Setup
 1. Fork the repository
 2. In the root directory, run `go mod tidy`
 3. Adjust product count in `main.go` as needed
 4. Run `go run cmd/server/main.go`
+
+# Api Docs
+- GET /health            → 200 {"status":"ok"}
+- GET /search?q=<term>   → 200 [{"id":…, "name":"…", "category":"…"}, …]
+Example: `curl localhost:8080/search?q=kitchen`
+
+# Benchmark
+On my machine (16 GB RAM, SSD), searching “kitchen” over 1M records took ~240 ms (average of 10 runs with curl_time).
 
 ## Change log
 
@@ -39,4 +50,5 @@ This Golang project helped me learn:
 This project is licensed under the MIT License.
 
 ## Resources
-- [W3schools](https://www.w3schools.com/go/index.php)
+- [Bleve Docs]([https://www.w3schools.com/go/index.php](https://blevesearch.com/docs/))
+- [Chi router](https://github.com/go-chi/chi)

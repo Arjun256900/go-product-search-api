@@ -8,6 +8,9 @@ A Go-based backend API that performs full-text operation on 1M products with Ble
 | ---------- | ------ |
 | 14th May 9am | Initial setup with standard Go structure |
 | 14th May 11am | Added random product name generator and product struct|
+| 14th May 12am | Bleve indexer and search service |
+| 14th May 2am | Search route and it's handler implementation |
+
 ## Author
 
 - 👨‍💻 Made with 💪 and ☕ by [Arjun](https://github.com/Arjun256900)

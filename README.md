@@ -18,19 +18,23 @@ You need `go 1.21+` to run this project.
 # Api Docs
 - GET /health            → 200 {"status":"ok"}
 - GET /search?q=<term>   → 200 [{"id":…, "name":"…", "category":"…"}, …]
-Example: `curl localhost:8080/search?q=kitchen`
+- Example: `curl localhost:8080/search?q=kitchen`
 
 # Benchmark
-On my machine (16 GB RAM, SSD), searching “kitchen” over 1M records took ~240 ms (average of 10 runs with curl_time).
+On my machine (16 GB RAM, 512GB SSD), searching “kitchen” over 1M records took ~240ms on average (using hey `-n 1000`, `-c 1`). Queries used to run tests:
+- http://localhost:8080/search?q=kitchen
+- http://localhost:8080/search?q=lucid
+- http://localhost:8080/search?q=icy  
 
 ## Change log
 
 | Time stamp | Progress |
 | ---------- | ------ |
-| 14th May 9am | Initial setup with standard Go structure |
-| 14th May 11am | Added random product name generator and product struct|
-| 14th May 12am | Bleve indexer and search service |
-| 14th May 2am | Search route and it's handler implementation |
+| 14th May 9:00 IST | Initial setup with standard Go structure |
+| 14th May 11:00 IST | Added random product name generator and product struct|
+| 14th May 12:00 IST | Bleve indexer and search service |
+| 14th May 14:00 IST | Search route and it's handler implementation |
+| 14th May 17:00 IST | Optimized O(n) lookup to O(1) using store map |
 
 ## 📚 What I learnt
 This Golang project helped me learn:
@@ -50,5 +54,7 @@ This Golang project helped me learn:
 This project is licensed under the MIT License.
 
 ## Resources
-- [Bleve Docs]([https://www.w3schools.com/go/index.php](https://blevesearch.com/docs/))
+- [Bleve Docs](https://blevesearch.com/docs/)
 - [Chi router](https://github.com/go-chi/chi)
+- [Golang](https://go.dev/)
+- [hey](https://github.com/rakyll/hey/)

@@ -1,8 +1,16 @@
+![Golang](https://img.shields.io/badge/Go-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
 ## Description
 
 A Go-based backend API that performs full-text operation on 1M products with Bleve and Chi-router.
-![Golang](https://img.shields.io/badge/Go-blue.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
+# Getting started
+## Setup
+1. Fork the repository
+2. In the root directory, run `go mod tidy`
+3. Adjust product count in `main.go` as needed
+4. Run `go run cmd/server/main.go`
 
 ## Change log
 

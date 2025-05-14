@@ -24,7 +24,9 @@ You need `go 1.21+` and at least 1GB of free ram to run this project.
 On my machine (16 GB RAM, 512GB SSD), searching “kitchen” over 1M records took ~240ms on average (using hey `-n 1000`, `-c 1`). It is to note that Bleve gets faster with following searches due to caching.Queries used to run tests:
 - http://localhost:8080/search?q=kitchen
 - http://localhost:8080/search?q=lucid
-- http://localhost:8080/search?q=icy  
+- http://localhost:8080/search?q=icy
+- http://localhost:8080/search?q=
+- http://localhost:8080/search?q=isdihfdsihdh    (no results found simulation)
 
 ## Change log
 

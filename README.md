@@ -6,7 +6,7 @@
 A Go-based backend API that performs full-text operation on 1M products with Bleve and Chi-router.
 
 # Prerequisites
-You need `go 1.21+` to run this project.
+You need `go 1.21+` and at least 1GB of free ram to run this project.
 
 # Getting started
 ## Setup

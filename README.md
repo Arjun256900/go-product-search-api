@@ -1,6 +1,6 @@
 ## Description
 
-A Go-based backend API that performs full-text operation on 1M products with Belve and Chi-router.
+A Go-based backend API that performs full-text operation on 1M products with Bleve and Chi-router.
 
 ## Change log
 

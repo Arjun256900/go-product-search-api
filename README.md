@@ -1,6 +1,8 @@
 ## Description
 
 A Go-based backend API that performs full-text operation on 1M products with Bleve and Chi-router.
+![Golang](https://img.shields.io/badge/Go-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## Change log
 
@@ -10,6 +12,14 @@ A Go-based backend API that performs full-text operation on 1M products with Ble
 | 14th May 11am | Added random product name generator and product struct|
 | 14th May 12am | Bleve indexer and search service |
 | 14th May 2am | Search route and it's handler implementation |
+
+## 📚 What I learnt
+This Golang project helped me learn:
+- The native chi-router in go
+- Practice Go routines
+- Optimize performance-critical applications
+- Bleve indexing package
+- Strengthen the understanding of Go semantics
 
 ## Author
 

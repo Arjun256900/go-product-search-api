@@ -21,7 +21,7 @@ You need `go 1.21+` and at least 1GB of free ram to run this project.
 - Example: `curl localhost:8080/search?q=kitchen`
 
 # Benchmark
-On my machine (16 GB RAM, 512GB SSD), searching “kitchen” over 1M records took ~240ms on average (using hey `-n 1000`, `-c 1`). Queries used to run tests:
+On my machine (16 GB RAM, 512GB SSD), searching “kitchen” over 1M records took ~240ms on average (using hey `-n 1000`, `-c 1`). It is to note that Bleve gets faster with following searches due to caching.Queries used to run tests:
 - http://localhost:8080/search?q=kitchen
 - http://localhost:8080/search?q=lucid
 - http://localhost:8080/search?q=icy  
